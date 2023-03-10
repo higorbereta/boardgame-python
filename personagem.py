@@ -1,3 +1,6 @@
+import atributos
+import Board_RPG
+
 def cadastra_personagem():
     print("============ <> ============")
     nome = input("Nome Personagem -> ")
@@ -6,6 +9,8 @@ def cadastra_personagem():
     nivel = 1
     exp = 0
     print("============ <> ============")
+
+    atributos.new_atrib()
 
     return nome, raca, classe, nivel, exp
 
@@ -24,3 +29,6 @@ def ficha_personagem(nome_pers, raca, classe,nivel,exp):
 
     print(" Nível: {}\n Exp: {} / {}".format(nivel,exp,next_level))
     print("=============[]=============")
+
+if(__name__ == "__main__"):
+    Board_RPG.menu()
